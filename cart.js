@@ -109,3 +109,11 @@ function copyCartId() {
         alert("✅ ID вашей корзины скопирован: " + cartID);
     });
 }
+// Функция обновления количества товаров в корзине
+function updateCartCount() {
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+    document.getElementById("cart-count").textContent = cart.length;
+}
+
+// Вызываем обновление корзины при загрузке страницы
+document.addEventListener("DOMContentLoaded", updateCartCount);
