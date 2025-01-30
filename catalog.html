@@ -7,9 +7,17 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="cart-buttons">
-    <button class="send-id-btn" onclick="openIdModal()">📋 Отправить ID</button>
-    <div class="cart-container" onclick="openCart()">🛒 <span id="cart-count">0</span></div>
+    <!-- Всплывающее окно с ID-корзины -->
+<div id="id-modal" class="modal">
+    <div class="modal-content">
+        <h2>📋 Скопируй номер ID-корзины</h2>
+        <p id="cart-id-text"></p>
+        <button class="copy-btn" onclick="copyCartId()">📋 Скопировать ID</button>
+        <a href="https://t.me/ТВОЙ_ТЕЛЕГРАМ" target="_blank" class="telegram-btn">📩 Отправить в Telegram</a>
+        <button class="close-btn" onclick="closeIdModal()">❌ Закрыть</button>
+    </div>
+</div>
+
 </div>
 
     <div class="container">
