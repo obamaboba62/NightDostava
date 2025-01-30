@@ -245,3 +245,95 @@ footer {
     font-size: 0.9rem;
     opacity: 0.7;
 }
+/* Контейнер для кнопок */
+.cart-buttons {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    gap: 10px;
+}
+
+/* Кнопка "Отправить ID" */
+.send-id-btn {
+    background: #008000;
+    color: white;
+    font-size: 1.2rem;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.send-id-btn:hover {
+    background: #00cc00;
+    transform: scale(1.1);
+}
+
+/* Всплывающее окно */
+.modal {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #1a1a1a;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+    width: 80%;
+    max-width: 400px;
+    text-align: center;
+    z-index: 1100;
+}
+
+.modal.active {
+    display: block;
+}
+
+/* Контент внутри модального окна */
+.modal-content {
+    color: white;
+}
+
+/* Кнопка копирования */
+.copy-btn {
+    background: #008000;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.copy-btn:hover {
+    background: #00cc00;
+}
+
+/* Кнопка Telegram */
+.telegram-btn {
+    display: block;
+    background: #0088cc;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-top: 10px;
+}
+
+.telegram-btn:hover {
+    background: #005f99;
+}
+
+/* Кнопка закрытия */
+.close-btn {
+    background: red;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
