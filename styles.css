@@ -51,20 +51,22 @@ nav a:hover {
 
 /* Корзина */
 .cart-container {
-    position: fixed;
-    top: 20px;
-    right: 20px;
     background: #1a1a1a;
-    padding: 10px 15px;
+    padding: 10px 12px;
     border-radius: 50px;
     display: flex;
     align-items: center;
-    gap: 5px;
-    font-size: 1.2rem;
+    font-size: 1rem;
     color: #ffffff;
     cursor: pointer;
-    z-index: 1000;
+    border: 2px solid #ffffff; /* Добавляем белую обводку */
 }
+
+.cart-container:hover {
+    background: #333;
+    transform: scale(1.1);
+}
+
 
 /* Модальное окно корзины */
 .cart-modal {
