@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NightDostava - Главная</title>
+    <link rel="stylesheet" href="styles.css">
+    <meta name="description" content="NightDostava - ночная доставка еды и алкоголя по Киеву. Быстро и вкусно!">
+<meta name="keywords" content="доставка еды, доставка алкоголя, ночная доставка, NightDostava, Киев">
+<meta name="author" content="NightDostava">
+<meta name="robots" content="index, follow">
+
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1 class="logo">🌙 NightDostava</h1>
+            <nav>
+                <a href="index.html" class="btn">🏠 Главная</a>
+                <a href="catalog.html" class="btn">📦 Каталог</a>
+            </nav>
+            <div class="cart-container">
+                <span>🛒</span>
+                <span id="cart-count">0</span>
+            </div>
+        </header>
+        
+
+        <main>
+            <section class="welcome">
+                <h2>Добро пожаловать в <span>NightDostava</span>!</h2>
+                <p>🚀 Быстрая ночная доставка еды и алкоголя по Киеву. Только лучшее – только для тебя!</p>
+                <a href="catalog.html" class="btn">📦 Перейти в каталог</a>
+            </section>
+
+            <section class="popular">
+                <h2>🔥 Сейчас популярно</h2>
+                <div class="popular-list">
+                    <div class="product">
+                        <img src="https://cdn-media.choiceqr.com/prod-eat-rebro-wroclaw/menu/lzFWiIc-lbctDuf-FbVbOtv.webp" alt="Пицца 'Мясной Удар'">
+                        <p>🍔 Бургер " Night Bacon Burger" - 370 грн</p>
+                        <p class="product-description">сочная мраморная говядина, айсберг-салат, солёный огурец, помидор, жареный бекон, лук, сыр чеддер и трюфельный соус.</p>
+                        <button class="btn add-to-cart" data-price="370">Добавить в корзину</button>
+                    </div>
+                    <div class="product">
+                        <img src="https://restaumatic-production.imgix.net/uploads/accounts/287097/media_library/7a1c3776-9678-4811-8ba0-b2fd54323a61.png?auto=compress%2Cformat&blur=0&crop=focalpoint&fit=max&fp-x=0.5&fp-y=0.5&h=auto&rect=0%2C0%2C1000%2C1000&w=1920" alt="Пицца 'Мясной Удар'">
+                        <p>🍕 Пицца "Night" - 279 грн</p>
+                        <p class="product-description">Томатный соус, моцарелла, запечённая курица, бекон, жареные шампиньоны, красный лук, маринованный огурец.    </p>
+                        <button class="btn add-to-cart" data-price="279">Добавить в корзину</button>
+                    </div>
+                    <div class="product">
+                        <img src="https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcSRmJObEqNG2mD2mbMZpQd7w5FvKAkbWOnqkSIzIyxMvCPiEMFYOh6Y5DGgVOIvvBK3hcllZZlr2AhEqOd079m3ln7E1Ahhv9zbQKpN4lngjDGrnhFm8xJDcwtY31r_0HAK9h85H6U&usqp=CAc" alt="Vodka Finlandia">
+                        <p>🍾 Фінляндія Ботанікал Лісова ягода та Троянда 0,7л 30% - 499 грн</p>
+                        <p class="product-description"></p>
+                        <button class="btn add-to-cart" data-price="499">Добавить в корзину</button>
+                    </div>
+                </div>
+            </section>
+
+            <section class="reviews">
+                <h2>📢 Отзывы клиентов</h2>
+                <p>💬 "Доставили за 30 минут, лучший сервис в Киеве!"</p>
+                <p>💬 "Алкоголь ночью? Спасибо, NightDostava!"</p>
+            </section>
+
+            <section class="contact">
+                <h2>📞 Связь с нами</h2>
+                <a href="https://t.me/NightDostava" class="btn">💬 Telegram</a>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; 2025 NightDostava. Все права защищены.</p>
+        </footer>
+    </div>
+</body>
+<script src="cart.js"></script>
+</html>

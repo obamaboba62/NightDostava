@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NightDostava - Каталог</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1 class="logo">📦 Каталог</h1>
+            <nav>
+                <a href="index.html" class="btn">🏠 Главная</a>
+            </nav>
+            <div class="cart-container">
+                <span>🛒</span>
+                <span id="cart-count">0</span>
+            </div>
+        </header>
+
+        <!-- КНОПКИ ПЕРЕКЛЮЧЕНИЯ -->
+        <div class="tabs">
+            <button class="tab-btn active" data-tab="food">🍔 Еда</button>
+            <button class="tab-btn" data-tab="alcohol">🥃 Алкоголь</button>
+        </div>
+        
+        <!-- ВКЛАДКА "Еда" -->
+        <section id="food" class="tab-content">
+            <h2>🍔 Еда</h2>
+            <div class="product-list">
+                <div class="product">
+                    <img src="https://cdn-media.choiceqr.com/prod-eat-rebro-wroclaw/menu/XUSIlmk-YNzueFg-HYqZzHU.webp" alt="Бургер 'Чёрная Мамба'">
+                    <p>🍔 Бургер " Night Cheeseburger" - 320 грн</p>
+                    <p class="product-description">Мягкая булочка, сочная говядина, айсберг-салат, помидор, маринованный лук, фирменный соус и выдержанный чеддер.</p>
+                    <button class="btn add-to-cart" data-price="320">Добавить в корзину</button>
+                </div>
+                <div class="product">
+                    <img src="https://cdn-media.choiceqr.com/prod-eat-rebro-wroclaw/menu/lzFWiIc-lbctDuf-FbVbOtv.webp" alt="Пицца 'Мясной Удар'">
+                    <p>🍔 Бургер " Night Bacon Burger" - 370 грн</p>
+                    <p class="product-description">сочная мраморная говядина, айсберг-салат, солёный огурец, помидор, жареный бекон, лук, сыр чеддер и трюфельный соус.</p>
+                    <button class="btn add-to-cart" data-price="370">Добавить в корзину</button>
+                </div>
+                <div class="product">
+                    <img src="https://cdn-media.choiceqr.com/prod-eat-rebro-wroclaw/menu/TgGfCim-YibJRTV-RDIHbyE.webp" alt="Пицца 'Мясной Удар'">
+                    <p>🍲 Суп "The Night Chicken Soup" - 169 грн</p>
+                    <p class="product-description">Просто лучший суп с курицей!</p>
+                    <button class="btn add-to-cart" data-price="169">Добавить в корзину</button>
+                </div>
+                <div class="product">
+                    <img src="https://cdn-media.choiceqr.com/prod-eat-rebro-wroclaw/menu/QHZBcIo-sbnHXeR-MQEblFZ.webp" alt="Пицца 'Мясной Удар'">
+                    <p>🍲 Суп "Ukrainian Night Borsch" - 210 грн</p>
+                    <p class="product-description">Приготовлен на говяжьем бульоне с запечённой свёклой, фасолью и копчёными свиными рёбрышками. Подаётся с копчёной сметаной, ржаным хлебом и намазкой из сала с чесноком</p>
+                    <button class="btn add-to-cart" data-price="210">Добавить в корзину</button>
+                </div>
+                <div class="product">
+                    <img src="https://restaumatic-production.imgix.net/uploads/accounts/287097/media_library/7a1c3776-9678-4811-8ba0-b2fd54323a61.png?auto=compress%2Cformat&blur=0&crop=focalpoint&fit=max&fp-x=0.5&fp-y=0.5&h=auto&rect=0%2C0%2C1000%2C1000&w=1920" alt="Пицца 'Мясной Удар'">
+                    <p>🍕 Пицца "Night" - 279 грн</p>
+                    <p class="product-description">Томатный соус, моцарелла, запечённая курица, бекон, жареные шампиньоны, красный лук, маринованный огурец.    </p>
+                    <button class="btn add-to-cart" data-price="279">Добавить в корзину</button>
+                </div>
+                <div class="product">
+                    <img src="https://restaumatic-production.imgix.net/uploads/accounts/287097/media_library/0692579f-2740-40c4-8319-7937aab11420.png?auto=compress%2Cformat&blur=0&crop=focalpoint&fit=max&fp-x=0.5&fp-y=0.5&h=auto&rect=0%2C0%2C1000%2C1000&w=1920" alt="Пицца 'Мясной Удар'">
+                    <p>🍕 Пицца "Napoli Pizza Night" - 179 грн</p>
+                    <p class="product-description">Томатный соус, моцарелла, салями Наполи.</p>
+                    <button class="btn add-to-cart" data-price="179">Добавить в корзину</button>
+                </div>
+            </div>
+        </section>
+        
+        <!-- ВКЛАДКА "Алкоголь" -->
+        <section id="alcohol" class="tab-content">
+            <h2>🥃 Алкоголь</h2>
+            <div class="product-list">
+                <div class="product">
+                    <img src="https://wine-point.ua/wp-content/uploads/2024/10/987dde41-6f7e-11ef-8172-8c06599d4184.png" alt="Nemiroff De Lux / Немирів Де Люкс 0,5л 40%">
+                    <p>🥃 Nemiroff De Lux / Немирів Де Люкс 0,5л 40% - 299 грн</p>
+                    <p class="product-description"></p>
+                    <button class="btn add-to-cart" data-price="299">Добавить в корзину</button>
+                </div>
+                <div class="product">
+                    <img src="https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcSRmJObEqNG2mD2mbMZpQd7w5FvKAkbWOnqkSIzIyxMvCPiEMFYOh6Y5DGgVOIvvBK3hcllZZlr2AhEqOd079m3ln7E1Ahhv9zbQKpN4lngjDGrnhFm8xJDcwtY31r_0HAK9h85H6U&usqp=CAc" alt="Vodka Finlandia">
+                    <p>🍾 Фінляндія Ботанікал Лісова ягода та Троянда 0,7л 30% - 499 грн</p>
+                    <p class="product-description"></p>
+                    <button class="btn add-to-cart" data-price="499">Добавить в корзину</button>
+                </div>
+                <div class="product">
+                    <img src="https://wine-point.ua/wp-content/uploads/2024/10/zubrowka-biala-40-07-l.png" alt="Vodka Finlandia">
+                    <p>🍾 Водка Зубровка Бяла 40%, 0,7 л - 359 грн</p>
+                    <p class="product-description"></p>
+                    <button class="btn add-to-cart" data-price="359">Добавить в корзину</button>
+                </div>
+                <div class="product">
+                    <img src="https://varus.ua/img/product/1140/1140/2635768" alt="Vodka Finlandia">
+                    <p>🍾 REVO ALCO ENERGY СИЛЬНОГАЗИРОВАННЫЙ 8.5% - 79грн</p>
+                    <p class="product-description"></p>
+                    <button class="btn add-to-cart" data-price="79">Добавить в корзину</button>
+                </div>
+                <div class="product">
+                    <img src="https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcQMS1ZnJT4lQ-BvTgXyMz-GYnkQu6f7megmBLuYPJE4K03KAkft6siC5v03JZRYYyK8FyQbopL-1jB7h9rJcqRQtWu8pqSuQ3A_AtBR_a5GeDBKNTfSEgOfxweVpC1xUQ9O7EV4bwk&usqp=CAc" alt="Vodka Finlandia">
+                    <p>🍾СИДР SOMERSBY ЯБЛОЧНЫЙ ПОЛУСЛАДКИЙ 4.7% 0.95л - 89грн</p>
+                    <p class="product-description"></p>
+                    <button class="btn add-to-cart" data-price="89">Добавить в корзину</button>
+                </div>
+            </div>
+        </section>
+        
+
+        <footer>
+            <p>&copy; 2025 NightDostava. Все права защищены.</p>
+        </footer>
+    </div>
+
+    <script src="cart.js"></script>
+    <script src="tabs.js"></script>
+    <!-- Всплывающее окно корзины -->
+
+<!-- Всплывающее окно корзины -->
+<div id="cart-modal" class="cart-modal">
+    <h2>🛒 Ваша корзина</h2>
+    <ul class="cart-items"></ul>
+    <button class="copy-cart-id">📋 Скопировать ID корзины</button>
+    <button class="close-cart">❌ Закрыть</button>
+</div>
+</body>
+</html>
