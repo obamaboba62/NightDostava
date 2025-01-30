@@ -117,3 +117,66 @@ function updateCartCount() {
 
 // Вызываем обновление корзины при загрузке страницы
 document.addEventListener("DOMContentLoaded", updateCartCount);
+// Функция открытия корзины
+function openCart() {
+    let cartModal = document.getElementById("cart-modal");
+    let cartItemsContainer = document.querySelector(".cart-items");
+
+    // Очищаем текущее содержимое
+    cartItemsContainer.innerHTML = "";
+
+    // Получаем сохранённые товары
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+    if (cart.length === 0) {
+        cartItemsContainer.innerHTML = "<p>🛒 Ваша корзина пуста</p>";
+    } else {
+        cart.forEach((item, index) => {
+            let listItem = document.createElement("li");
+            listItem.innerHTML = `
+                ${item.name} - ${item.price} грн 
+                <button class="remove-item" onclick="removeFromCart(${index})">🗑️</button>
+            `;
+            cartItemsContainer.appendChild(listItem);
+        });
+    }
+
+    cartModal.classList.add("active");
+}
+
+// Функция закрытия корзины
+function closeCart() {
+    document.getElementById("cart-modal").classList.remove("active");
+}
+
+// Функция добавления товара в корзину
+document.querySelectorAll(".add-to-cart").forEach(button => {
+    button.addEventListener("click", function() {
+        let productName = this.getAttribute("data-name");
+        let productPrice = this.getAttribute("data-price");
+
+        let cart = JSON.parse(localStorage.getItem("cart")) || [];
+        cart.push({ name: productName, price: productPrice });
+        localStorage.setItem("cart", JSON.stringify(cart));
+
+        updateCartCount();
+    });
+});
+
+// Функция обновления количества товаров в корзине
+function updateCartCount() {
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+    document.getElementById("cart-count").textContent = cart.length;
+}
+
+// Функция удаления товара из корзины
+function removeFromCart(index) {
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+    cart.splice(index, 1);
+    localStorage.setItem("cart", JSON.stringify(cart));
+    openCart();
+    updateCartCount();
+}
+
+// Вызываем обновление корзины при загрузке страницы
+document.addEventListener("DOMContentLoaded", updateCartCount);
