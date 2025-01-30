@@ -1,23 +1,18 @@
 document.addEventListener("DOMContentLoaded", function () {
-    const cart = [];
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
     const cartCount = document.getElementById("cart-count");
     const cartItemsList = document.querySelector(".cart-items");
     const cartModal = document.getElementById("cart-modal");
-    const cartButton = document.querySelector(".cart-btn");
+    const cartButton = document.querySelector(".cart-container");
     const closeCartButton = document.querySelector(".close-cart");
     const copyCartIdButton = document.querySelector(".copy-cart-id");
-
-    // Проверяем, есть ли товары в локальном хранилище
-    if (localStorage.getItem("cart")) {
-        const storedCart = JSON.parse(localStorage.getItem("cart"));
-        cart.push(...storedCart);
-        updateCart();
-    }
 
     // Функция добавления товара в корзину
     function addToCart(event) {
         const button = event.target;
         const product = button.closest(".product");
+        if (!product) return;
+
         const productName = product.querySelector("p").textContent;
         const productPrice = parseInt(button.getAttribute("data-price"));
 
@@ -32,11 +27,13 @@ document.addEventListener("DOMContentLoaded", function () {
         updateCart();
     }
 
-    // Добавляем обработчики на кнопки "Добавить в корзину"
-    document.querySelectorAll(".add-to-cart").forEach(button => {
-        button.removeEventListener("click", addToCart); // Удаляем старый обработчик
-        button.addEventListener("click", addToCart);
-    });
+    // Назначаем обработчики **Только Один Раз**
+    function attachEventListeners() {
+        document.querySelectorAll(".add-to-cart").forEach(button => {
+            button.removeEventListener("click", addToCart);
+            button.addEventListener("click", addToCart);
+        });
+    }
 
     // Функция обновления корзины
     function updateCart() {
@@ -54,7 +51,7 @@ document.addEventListener("DOMContentLoaded", function () {
         });
 
         cartCount.textContent = totalItems;
-        localStorage.setItem("cart", JSON.stringify(cart));
+        saveCart();
     }
 
     // Функция удаления товара из корзины
@@ -91,6 +88,7 @@ document.addEventListener("DOMContentLoaded", function () {
         alert(`ID-корзины скопирован: ${cartId}`);
     });
 
-    // Первое обновление корзины
+    // Запускаем корректное обновление
     updateCart();
+    attachEventListeners(); // Назначаем обработчики **один раз**
 });
