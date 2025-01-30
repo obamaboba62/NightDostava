@@ -248,11 +248,14 @@ footer {
 /* Контейнер для кнопок */
 .cart-buttons {
     position: fixed;
-    top: 20px;
+    top: 10px; /* Чуть опустили */
     right: 20px;
     display: flex;
-    gap: 10px;
+    flex-direction: row-reverse; /* Переставляем кнопки местами */
+    align-items: center;
+    gap: 15px; /* Раздвигаем кнопки */
 }
+
 
 /* Кнопка "Отправить ID" */
 .send-id-btn {
