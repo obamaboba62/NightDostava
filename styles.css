@@ -263,7 +263,7 @@ footer {
     background: #008000;
     color: white;
     font-size: 1rem; /* Чуть меньше текста */
-    padding: 8px 12px; /* Чуть меньше отступы */
+    padding: 27px 12px; /* Чуть меньше отступы */
     border: 2px solid #00ff00;
     border-radius: 8px;
     cursor: pointer;
