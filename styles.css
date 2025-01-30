@@ -248,21 +248,22 @@ footer {
 /* Контейнер для кнопок */
 .cart-buttons {
     position: fixed;
-    top: 10px; /* Чуть опустили */
+    top: 10px; /* Немного опустили кнопки */
     right: 20px;
     display: flex;
-    flex-direction: row-reverse; /* Переставляем кнопки местами */
+    justify-content: flex-end;
     align-items: center;
-    gap: 15px; /* Раздвигаем кнопки */
+    gap: 30px; /* Раздвигаем кнопки сильнее */
 }
+
 
 
 /* Кнопка "Отправить ID" */
 .send-id-btn {
     background: #008000;
     color: white;
-    font-size: 1rem; /* Уменьшаем немного текст */
-    padding: 8px 12px; /* Уменьшаем отступы */
+    font-size: 1rem; /* Чуть меньше текста */
+    padding: 8px 12px; /* Чуть меньше отступы */
     border: 2px solid #00ff00;
     border-radius: 8px;
     cursor: pointer;
@@ -270,6 +271,7 @@ footer {
     box-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
     white-space: nowrap; /* Чтобы текст не переносился */
 }
+
 
 
 .send-id-btn:hover {
