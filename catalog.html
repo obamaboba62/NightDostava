@@ -25,6 +25,20 @@
             <h1 class="logo">📦 Каталог</h1>
             <nav>
                 <a href="index.html" class="btn">🏠 Главная</a>
+                <div id="id-modal" class="modal">
+    <div class="modal-content">
+        <h2>📋 Скопируй номер ID-корзины</h2>
+        <p id="cart-id-text"></p>
+        <button class="copy-btn" onclick="copyCartId()">📋 Скопировать ID</button>
+        <a href="https://t.me/NightDostava" target="_blank" class="telegram-btn">📩 Отправить в Telegram</a>
+        <button class="close-btn" onclick="closeIdModal()">❌ Закрыть</button>
+    </div>
+</div>
+
+            <div class="cart-container">
+                <span>🛒</span>
+                <span id="cart-count">0</span>
+            </div>
             </nav>
           
         </header>
