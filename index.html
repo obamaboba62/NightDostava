@@ -20,35 +20,28 @@
                 <a href="catalog.html" class="btn">📦 Каталог</a>
             </nav>
            <div class="cart-buttons">
-    <!-- Кнопка "Отправить ID" -->
-    <button class="send-id-btn" onclick="openIdModal()">📋 Отправить ID</button>
-
-    <!-- Кнопка корзины -->
-<!-- Кнопка корзины -->
+<!-- Одна кнопка "Купить" с корзиной -->
 <div class="cart-container" onclick="openCart()">
-    🛒 <span id="cart-count">0</span>
+    🛒 Купить (<span id="cart-count">0</span>)
 </div>
-    
 
-<!-- Всплывающее окно с ID-корзины -->
-<div id="id-modal" class="modal">
-    <div class="modal-content">
-        <h2>📋 Скопируй номер ID-корзины</h2>
-        <p id="cart-id-text"></p>
-        <button class="copy-btn" onclick="copyCartId()">📋 Скопировать ID</button>
-        <a href="https://t.me/NightDostava" target="_blank" class="telegram-btn">📩 Отправить в Telegram</a>
-        <button class="close-btn" onclick="closeIdModal()">❌ Закрыть</button>
-    </div>
-</div>
-               <!-- Всплывающее окно корзины -->
+<!-- Всплывающее окно "Купить" -->
 <div id="cart-modal" class="modal">
     <div class="modal-content">
         <h2>🛒 Ваша корзина</h2>
         <ul class="cart-items"></ul>
+        
+        <h3>📋 ID-корзины:</h3>
+        <p id="cart-id-text">#123456</p>
         <button class="copy-btn" onclick="copyCartId()">📋 Скопировать ID</button>
+
+        <h3>📩 Свяжитесь с оператором:</h3>
+        <a href="https://t.me/NightDostava" target="_blank" class="telegram-btn">📩 Отправить в Telegram</a>
+        
         <button class="close-btn" onclick="closeCart()">❌ Закрыть</button>
     </div>
 </div>
+
 
         </header>
         
