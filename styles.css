@@ -262,22 +262,21 @@ footer {
 .send-id-btn {
     background: #008000;
     color: white;
-    font-size: 1rem; /* Чуть меньше текста */
-    padding: 27px 12px; /* Чуть меньше отступы */
+    font-size: 1rem; /* Чуть меньше текст */
+    padding: 8px 12px; /* Уменьшенные отступы */
     border: 2px solid #00ff00;
     border-radius: 8px;
     cursor: pointer;
     transition: 0.3s;
     box-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
-    white-space: nowrap; /* Чтобы текст не переносился */
+    white-space: nowrap; /* Текст не переносится */
 }
-
-
 
 .send-id-btn:hover {
     background: #00cc00;
     transform: scale(1.1);
 }
+
 
 /* Всплывающее окно */
 .modal {
