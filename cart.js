@@ -1,5 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
     let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
     const cartCount = document.getElementById("cart-count");
     const cartItemsList = document.querySelector(".cart-items");
     const cartModal = document.getElementById("cart-modal");
@@ -13,7 +14,7 @@ document.addEventListener("DOMContentLoaded", function () {
         const product = button.closest(".product");
         if (!product) return;
 
-        const productName = product.querySelector("p").textContent;
+        const productName = product.querySelector("p").textContent.trim();
         const productPrice = parseInt(button.getAttribute("data-price"));
 
         const existingItem = cart.find(item => item.name === productName);
@@ -27,7 +28,7 @@ document.addEventListener("DOMContentLoaded", function () {
         updateCart();
     }
 
-    // Назначаем обработчики **Только Один Раз**
+    // Назначаем обработчики на кнопки "Добавить в корзину"
     function attachEventListeners() {
         document.querySelectorAll(".add-to-cart").forEach(button => {
             button.removeEventListener("click", addToCart);
@@ -88,7 +89,7 @@ document.addEventListener("DOMContentLoaded", function () {
         alert(`ID-корзины скопирован: ${cartId}`);
     });
 
-    // Запускаем корректное обновление
+    // Первичная настройка
     updateCart();
-    attachEventListeners(); // Назначаем обработчики **один раз**
+    attachEventListeners();
 });
