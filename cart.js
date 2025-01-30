@@ -91,3 +91,21 @@ document.addEventListener("DOMContentLoaded", function () {
     // Обновляем количество товаров при загрузке
     updateCartCount();
 });
+// Открытие окна с ID-корзины
+function openIdModal() {
+    document.getElementById("id-modal").classList.add("active");
+    document.getElementById("cart-id-text").textContent = "Ваш ID: " + localStorage.getItem("cartID");
+}
+
+// Закрытие окна
+function closeIdModal() {
+    document.getElementById("id-modal").classList.remove("active");
+}
+
+// Копирование ID-корзины
+function copyCartId() {
+    let cartID = localStorage.getItem("cartID");
+    navigator.clipboard.writeText(cartID).then(() => {
+        alert("✅ ID вашей корзины скопирован: " + cartID);
+    });
+}
